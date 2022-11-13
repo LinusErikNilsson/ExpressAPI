@@ -54,3 +54,25 @@ export const createNewPost = (req: Request, res: Response) =>
   posts.push(newPost);
   res.status(201).json(newPost);
 };
+
+export const updatePostById = (req: Request, res: Response) =>
+{
+  let post = posts.find((post) => post.id === parseInt(req.params.id));
+  if (!post)
+  {
+    res.status(404).send("No Post with this ID was found");
+  }
+  else 
+  {
+    post = 
+    {
+      id: req.body.id,
+      title: req.body.title,
+      header: req.body.header,
+      content: req.body.content
+    };
+    posts.push(post);
+    res.status(200).json(post);
+  }
+};
+
