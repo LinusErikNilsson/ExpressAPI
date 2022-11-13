@@ -76,3 +76,23 @@ export const updatePostById = (req: Request, res: Response) =>
   }
 };
 
+export const removePostById = (req: Request, res: Response) =>
+{
+  const post = posts.find((post) => post.id === parseInt(req.params.id));
+
+  if (!post)
+  {
+    res.status(404).send("No post with this ID was found");
+  }
+  else
+  {
+    posts.splice(posts.indexOf(post), 1);
+    res.status(204).json(post);
+  }
+};
+
+export const removeAllPosts = (req: Request, res: Response) =>
+{
+  posts = new Array<Post>();
+  res.status(200).json(null).send("All Posts removed");
+};
