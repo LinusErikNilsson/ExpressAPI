@@ -1,0 +1,41 @@
+### Please run below test-requests from top to bottom
+
+
+### Get all posts
+GET http://localhost:3000/api/posts
+
+
+### Get one post by id
+GET http://localhost:3000/api/posts/id/1
+
+
+### Create a new post
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Hello World",
+  "header": "Hey, this is actually working - funny moments from Software Devs.",
+  "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil nobis eos iste! Quibusdam sint modi obcaecati, rem at dolorem iure magni eum! Nemo nesciunt cumque rerum placeat illum fugit illo."
+}
+
+
+### Update post by id
+PUT http://localhost:3000/api/posts/id/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "title": "This Post is now updated",
+    "header": "This header is updated too",
+    "content": "Content is updated too"
+}
+
+
+### Remove post by id
+DELETE http://localhost:3000/api/posts/id/2
+
+
+### Remove all posts
+DELETE http://localhost:3000/api/posts

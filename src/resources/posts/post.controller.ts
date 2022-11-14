@@ -62,18 +62,20 @@ export const updatePostById = (req: Request, res: Response) =>
   {
     res.status(404).send("No Post with this ID was found");
   }
-  else 
+  if (post)
   {
-    post = 
-    {
-      id: req.body.id,
-      title: req.body.title,
-      header: req.body.header,
-      content: req.body.content
-    };
+    posts.splice(posts.indexOf(post), 1); 
+  }
+      post =
+      {
+        id: req.body.id,
+        title: req.body.title,
+        header: req.body.header,
+        content: req.body.content
+      };
+    
     posts.push(post);
     res.status(200).json(post);
-  }
 };
 
 export const removePostById = (req: Request, res: Response) =>
