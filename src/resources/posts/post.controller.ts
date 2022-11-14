@@ -27,20 +27,6 @@ export const getAllPosts = (req: Request, res: Response) =>
   }
 }
 
-export const getPostById = (req: Request, res: Response) =>
-{
-  const post = posts.find((post) => post.id === parseInt(req.params.id));
-
-  if (!post)
-  {
-    res.status(404).send("Sorry, no post with this ID was found");
-  }
-  else
-  {
-    res.status(200).json(post);
-  }
-};
-
 export const createNewPost = (req: Request, res: Response) =>
 {
   let newPost: Post = 
@@ -92,3 +78,4 @@ export const removePostById = (req: Request, res: Response) =>
     res.status(204).json(post);
   }
 };
+
