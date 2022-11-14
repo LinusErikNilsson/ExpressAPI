@@ -18,7 +18,7 @@ The API handles "Posts" which contains Id, title, header, and content.
 - npm install
 - npm run dev
 
-### Funktionskrav: [x] = Krav uppfyllt
+### Funktionskrav:
 Krav för godkänt:
 1. [x] Projektet innehåller minst 4 st. endpoints (GET, POST, PUT & DELETE för en resurs)
 2. [x] Samtliga endpoints skall kunna nås via en REST Client fil (.rest|.http)
