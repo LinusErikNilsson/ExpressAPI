@@ -32,6 +32,3 @@ Content-Type: application/json
 ### Remove post by id
 DELETE http://localhost:3000/api/posts/id/2
 
-
-### Remove all posts
-DELETE http://localhost:3000/api/posts

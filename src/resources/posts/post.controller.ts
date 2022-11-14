@@ -92,9 +92,3 @@ export const removePostById = (req: Request, res: Response) =>
     res.status(204).json(post);
   }
 };
-
-export const removeAllPosts = (req: Request, res: Response) =>
-{
-  posts = new Array<Post>();
-  res.status(200).json(null).send("All Posts removed");
-};
