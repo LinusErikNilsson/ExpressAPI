@@ -29,9 +29,11 @@ export const getAllPosts = (req: Request, res: Response) =>
 
 export const createNewPost = (req: Request, res: Response) =>
 {
+  let newPostId = posts.length + 1;
+
   let newPost: Post = 
   {
-    id: req.body.id,
+    id: newPostId,
     title: req.body.title,
     header: req.body.header,
     content: req.body.content

@@ -8,7 +8,6 @@ POST http://localhost:3000/api/posts
 Content-Type: application/json
 
 {
-  "id": 3,
   "title": "Hello World",
   "header": "Hey, this is actually working - funny moments from Software Devs.",
   "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil nobis eos iste! Quibusdam sint modi obcaecati, rem at dolorem iure magni eum! Nemo nesciunt cumque rerum placeat illum fugit illo."
@@ -28,5 +27,5 @@ Content-Type: application/json
 
 
 ### Remove post by id
-DELETE http://localhost:3000/api/posts/id/3
+DELETE http://localhost:3000/api/posts/id/4
 
